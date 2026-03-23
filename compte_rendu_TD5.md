@@ -9,14 +9,15 @@
 | **Encadrante** | **Mme Lamia DERRODE** |
 | **Cours** | INF-TC2 — Programmation orientée objet |
 | **Nature du rendu** | Devoir 2 — archive conforme aux consignes Pedagogie1 |
-| **Groupe** | *[À compléter]* |
-| **Date de rendu** | *[À compléter]* |
+| **Groupe** | B2b |
+| **Date de rendu** | 23/03/2026 |
 
 ---
 
 ## Résumé
 
-Le présent document rend compte des **améliorations apportées au jeu du pendu** dans le cadre de la quatrième partie du TD5. Il complète le livrable technique (`Pendu.py`, `mots.txt`, `formes.py`) par une **vue d’ensemble de la modélisation** et une **mise en valeur des fonctionnalités ajoutées**, du point de vue de l’utilisateur et de l’architecture logicielle. Les captures d’écran et illustrations sont regroupées dans des **figures réservées**.
+Le présent document rend compte des **améliorations apportées au jeu du pendu** dans le cadre de la quatrième partie du TD5. Il complète le livrable technique (`Pendu.py`, `mots.txt`, `formes.py`) par une **vue d’ensemble de la modélisation** et une **mise en valeur des fonctionnalités ajoutées**, du point de vue de l’utilisateur et de l’architecture logicielle. Les captures d’écran et le diagramme UML sont regroupés dans le dossier **`figures/`** et référencés ci-dessous.
+
 ---
 
 ## 1. Contexte et périmètre du compte-rendu
@@ -31,9 +32,11 @@ Ce rapport se concentre, comme demandé dans les consignes, sur **cette partie f
 
 ### 2.1 Figure A — Diagramme UML complet
 
+<div align="center">
 
+![Figure A — Diagramme de classes UML de l’application](figures/class_diagram.png)
 
-![Figure A — Diagramme de classes UML de l’application](class_diagram.png)
+</div>
 
 ### 2.2 Lecture de la modélisation
 
@@ -49,15 +52,33 @@ Le joueur n’est pas matérialisé par une classe autonome : l’identité est 
 
 ### 3.1 Personnalisation de l’expérience visuelle 
 
-**Objectif pédagogique :** offrir à l’utilisateur un **contrôle sur l’ambiance** de l’application sans encombrer l’écran de jeu.
+**Objectif :** offrir à l’utilisateur un **contrôle sur l’ambiance** de l’application sans encombrer l’écran de jeu.
 
 **Apport réel :** deux niveaux de personnalisation sont proposés via le menu *Apparence* : la **teinte générale** de l’interface (barres, fonds, zone de texte) et la **couleur du canevas** où s’affiche le pendu. Lorsque la zone de dessin change, les couleurs du personnage et de la potence sont **rééquilibrées** pour conserver une lisibilité satisfaisante sur fond clair comme sur fond sombre. Cette attention portée au **contraste** participe à la qualité perçue du produit.
 
 **Figure B — Personnalisation des couleurs**
 
-**[RÉSERVÉ — Capture d’écran : menu *Apparence* ouvert et/ou interface après changement de thème de couleur.]**
+<div align="center">
 
-![Figure B — Personnalisation de l’interface](figureB_apparence.png)
+![Figure B.1 — Menu *Apparence* et personnalisation](figures/figure_B01.png)
+
+</div>
+
+<br>
+
+<div align="center">
+
+![Figure B.2 — Variante de thème (interface)](figures/figure_B02.png)
+
+</div>
+
+<br>
+
+<div align="center">
+
+![Figure B.3 — Canevas / couleurs du pendu](figures/figure_B03.png)
+
+</div>
 
 ---
 
@@ -67,9 +88,19 @@ Le joueur n’est pas matérialisé par une classe autonome : l’identité est 
 
 **Figure C — Fonction d’annulation**
 
-**[RÉSERVÉ — Capture d’écran : barre d’outils avec le bouton d’annulation visible, idéalement avant/après un coup annulé.]**
+<div align="center">
 
-![Figure C — Annulation du dernier coup](figureC_undo.png)
+![Figure C.1 — Barre d’outils et annulation](figures/figure_C01.png)
+
+</div>
+
+<br>
+
+<div align="center">
+
+![Figure C.2 — État après annulation](figures/figure_C02.png)
+
+</div>
 
 ---
 
@@ -89,15 +120,37 @@ L’ensemble positionne le pendu non seulement comme un jeu, mais comme une **pe
 
 **Figure D — Suivi et statistiques**
 
-**[RÉSERVÉ — Capture d’écran : fenêtre *Tableau de bord* ou *Mes statistiques*, ou *Classement des joueurs*.]**
+<div align="center">
 
-![Figure D — Tableau de bord ou statistiques](figureD_stats.png)
+![Figure D.1 — Mes statistiques](figures/figure_D_stats.png)
+
+</div>
+
+<br>
+
+<div align="center">
+
+![Figure D.2 — Statistiques et performances](figures/figure_D_stats_et_Performance.png)
+
+</div>
+
+<br>
+
+<div align="center">
+
+![Figure D.3 — Classement des joueurs](figures/figure_D_classement.png)
+
+</div>
+
+<br>
 
 **Figure E — Exemple de fichier de données structuré**
 
-**[RÉSERVÉ — Capture d’écran d’un extrait de `scores_pendu.txt` montrant les en-têtes et le tableau, ou annexe en PDF.]**
+<div align="center">
 
-![Figure E — Fichier de scores structuré](figureE_fichier_scores.png)
+![Figure E — Extrait du fichier de scores (scores_pendu.txt)](figures/fichier_texte.png)
+
+</div>
 
 ---
 
@@ -123,20 +176,4 @@ Les travaux décrits répondent aux **exigences obligatoires** de la partie 4 et
 
 ---
 
-## Annexes
 
-### Annexe A — Contenu de l’archive de rendu
-
-- `Pendu.py` — application regroupant les classes principales et le point d’entrée  
-- `mots.txt`, `formes.py`  
-- Présent document (Markdown ou export PDF)  
-- Diagramme UML (fichier image ou inclus dans le PDF)  
-- Captures des **figures B à E** une fois insérées  
-
-### Annexe B — Lancement
-
-Exécuter `Pendu.py` depuis le répertoire contenant également `mots.txt` et `formes.py`.
-
----
-
-*Document rédigé par Robert Valere DJAHLIN-NICOUE et Assami TRAORE — INF-TC2.*
